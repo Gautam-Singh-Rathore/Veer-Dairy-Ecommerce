@@ -4,6 +4,7 @@ import CategorySection from '../components/CategorySection'
 import Testimonial from '../components/Testimonial'
 import TopProducts from '../components/TopProducts'
 import OurMission from '../components/OurMission'
+import VideoComponent from '../components/VideoComponent'
 
 const HomePage = () => {
   return (
@@ -12,6 +13,7 @@ const HomePage = () => {
       <CategorySection/>
       <TopProducts/>
       <OurMission/>
+      <VideoComponent/>
       <Testimonial/>
     </div>
   )

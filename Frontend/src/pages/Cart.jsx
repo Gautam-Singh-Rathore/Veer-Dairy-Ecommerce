@@ -10,7 +10,7 @@ import { useNavigate } from "react-router";
 const Cart = () => {
   const { cart,setCart, addToCart, removeFromCart, clearCart } =
     useContext(CartContext);
-  const { user } = useContext(UserContext);
+  const { user , isLoggedIn} = useContext(UserContext);
   const navigate = useNavigate();
 
   // Calculate Total Price
@@ -21,6 +21,10 @@ const Cart = () => {
 
   // Order Handler (To be implemented)
   const handleOrder = async () => {
+    if(!isLoggedIn){
+      navigate("/login")
+        return;
+    }
     const request = {
       customerId: user.uid,
       total: totalPrice,

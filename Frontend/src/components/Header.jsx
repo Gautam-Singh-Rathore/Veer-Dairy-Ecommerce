@@ -56,7 +56,7 @@ const Header = () => {
             </li>
             <li
               className="cursor-pointer hover:scale-105 hover:text-[#00B86C]"
-              onClick={() => navigate("/orders")}
+              onClick={() => {isLoggedIn?navigate("/orders"):navigate("/login")}}
             >
               Orders
             </li>
@@ -175,7 +175,7 @@ const Header = () => {
               <li
                 className="cursor-pointer py-2 hover:scale-105 hover:text-[#00B86C]"
                 onClick={() => {
-                  navigate("/orders");
+                  isLoggedIn?navigate("/orders"):navigate("/login")
                   setIsVisible(false);
                 }}
               >

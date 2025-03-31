@@ -54,6 +54,9 @@ const AdminOrders = () => {
 
   return (
     <div className="pt-[12vh] w-full max-w-6xl mx-auto min-h-screen p-4">
+      <h2 className="text-2xl font-bold text-[#00B86C] text-center mb-6">
+          My Orders
+        </h2>
       {/* Pending Orders Section */}
       <div className="bg-white shadow-lg rounded-lg p-6 mb-6">
         <h2 className="text-xl sm:text-2xl font-bold text-gray-800 mb-4">Pending Orders</h2>

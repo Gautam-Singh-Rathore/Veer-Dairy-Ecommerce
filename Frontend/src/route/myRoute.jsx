@@ -58,12 +58,17 @@ const myRoute = createBrowserRouter([
         path: "/cart",
         element: <Cart />,
       },
-      // Role-based routing for orders
-      { path: "/orders", element: <AdminOrders/> },
+      { path: "/orders",
+         element: <OrderDetails/> 
+      },
       {
         path: "/admin/products",
         element: <AdminProducts />,
       },
+      {
+        path:"/admin/orders",
+        element: <AdminOrders/>
+      }
     ],
   },
 ]);
