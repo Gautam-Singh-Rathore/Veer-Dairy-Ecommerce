@@ -16,6 +16,7 @@ import AdminOrders from "../pages/AdminOrders";
 import { useContext } from "react";
 import { UserContext } from "../context/UserProvider";
 import RoleBasedRoute from "./RoleBasedRoute"
+import AboutUs from "../pages/AboutUs";
 
 const myRoute = createBrowserRouter([
   {
@@ -68,6 +69,10 @@ const myRoute = createBrowserRouter([
       {
         path:"/admin/orders",
         element: <AdminOrders/>
+      },
+      {
+        path:"/about",
+        element:<AboutUs/>
       }
     ],
   },
