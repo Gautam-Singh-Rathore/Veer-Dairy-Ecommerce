@@ -1,38 +1,56 @@
 import React from "react";
-import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa"; 
-import p1 from "../../public/assets/p1.png"
-import p2 from "../../public/assets/p2.png"
-import p3 from "../../public/assets/p3.png"
+import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
+import { Swiper, SwiperSlide } from "swiper/react";  // Import Swiper and SwiperSlide
+import "swiper/css";  // Correct import for Swiper styles
 
 const Testimonial = () => {
   const testimonials = [
     {
       name: "Aarav Sharma",
-      review:
-        "The quality of milk is top-notch! It's fresh, pure, and tastes just like the farm-fresh milk I used to have in my childhood. I no longer worry about adulteration.",
-      image: p1,
+      reviewHindi:
+        "Veer Dairy का दूध और मक्खन मेरे घर में रोज़ इस्तेमाल होता है। दूध इतना गाढ़ा होता है कि चाय और कॉफी का स्वाद ही बदल जाता है, और मक्खन एकदम देसी स्वाद देता है।",
+      reviewEnglish:
+        "Veer Dairy’s milk and butter are used daily at my home. The milk is so rich that it completely enhances the taste of tea and coffee.",
       role: "Health-Conscious Consumer",
       rating: 5,
     },
-    
     {
       name: "Rohan Desai",
-      review:
-        "I run a small café, and ever since I switched to their milk, my customers have noticed the difference! The lattes and desserts taste much richer now.",
-      image: p2,
+      reviewHindi:
+        "मैंने कई ब्रांड्स का घी ट्राय किया है, लेकिन Veer Dairy का घी एकदम शुद्ध और सुगंधित है। रोटी पर लगा दो या हलवे में डालो – स्वाद दोगुना हो जाता है!",
+      reviewEnglish:
+        "I’ve tried many brands of ghee, but Veer Dairy’s ghee is pure and aromatic. Whether on hot rotis or in halwa – it takes the taste to the next level!",
       role: "Café Owner",
       rating: 4.7,
     },
     {
       name: "Priya Malhotra",
-      review:
-        "Their ghee is simply amazing! It has a rich aroma and authentic taste, making my homemade rotis and sweets even more delicious. Highly recommended!",
-      image: p3,
+      reviewHindi:
+        "Veer Dairy के प्रोडक्ट्स में जो क्वालिटी है, वो आजकल बहुत कम देखने को मिलती है। पनीर, दूध, बटर और घी – सब कुछ भरोसेमंद और स्वादिष्ट है।",
+      reviewEnglish:
+        "The quality of Veer Dairy products is hard to find these days. Paneer, milk, butter, and ghee – everything is trustworthy and full of flavor.",
       role: "Homemaker",
       rating: 5,
     },
+    {
+      name: "Amit Kumar",
+      reviewHindi:
+        "Veer Dairy का बटर बच्चों को इतना पसंद है कि वो रोटी पर सिर्फ वही लगाकर खाना पसंद करते हैं। और दूध तो इतना फ्रेश होता है कि मलाई खुद बन जाती है।",
+      reviewEnglish:
+        "My kids love Veer Dairy’s butter so much they ask for it on plain rotis. And the milk is so fresh that you get a natural cream layer every time.",
+      role: "Father & Working Professional",
+      rating: 5,
+    },
+    {
+      name: "Sunita Rao",
+      reviewHindi:
+        "मैंने हाल ही में Veer Dairy का घी लिया – क्या खुशबू है! घर में जैसे पुराना देसी घी बनता था, वैसा ही अनुभव मिला। अब मैं किसी और का घी नहीं लूंगा।",
+      reviewEnglish:
+        "I recently bought Veer Dairy’s ghee – what an aroma! It reminded me of the homemade ghee we used to make years ago. I won’t switch to any other now.",
+      role: "Housewife",
+      rating: 4.8,
+    },
   ];
-  
 
   // Function to render star ratings using react-icons
   const renderStars = (rating) => {
@@ -70,22 +88,38 @@ const Testimonial = () => {
             saying
           </p>
 
-          <div className="flex flex-wrap -m-4">
+          {/* Swiper Carousel */}
+          <Swiper
+            spaceBetween={30}
+            slidesPerView={1}
+            loop={true}
+            centeredSlides={true}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            breakpoints={{
+              640: {
+                slidesPerView: 1,
+              },
+              768: {
+                slidesPerView: 2,
+              },
+              1024: {
+                slidesPerView: 3,
+              },
+            }}
+            className="mySwiper"
+          >
             {testimonials.map((testimonial, index) => (
-              <div
-                key={index}
-                className="lg:w-1/3 md:w-1/2 p-4 w-full transform transition duration-500 hover:scale-105"
-              >
+              <SwiperSlide key={index}>
                 <div className="h-full bg-white rounded-3xl shadow-lg p-8 flex flex-col items-center text-center">
-                  {/* Image */}
-                  <img
-                    alt={testimonial.name}
-                    className="w-24 h-24 mb-6 object-cover object-center rounded-full border-4 border-[#00B86C] shadow-md"
-                    src={testimonial.image}
-                  />
-                  {/* Review */}
-                  <p className="leading-relaxed text-gray-700 italic">
-                    "{testimonial.review}"
+                  {/* Review in Hindi and English */}
+                  <p className="leading-relaxed text-gray-700  mb-4">
+                    <strong></strong> {testimonial.reviewHindi}
+                  </p>
+                  <p className="leading-relaxed text-gray-700  mb-6">
+                    <strong></strong> {testimonial.reviewEnglish}
                   </p>
                   {/* Divider */}
                   <span className="inline-block h-1 w-12 rounded bg-[#00B86C] mt-6 mb-4" />
@@ -99,9 +133,9 @@ const Testimonial = () => {
                   {/* Rating */}
                   {renderStars(testimonial.rating)}
                 </div>
-              </div>
+              </SwiperSlide>
             ))}
-          </div>
+          </Swiper>
         </div>
       </section>
     </div>

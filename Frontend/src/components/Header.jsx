@@ -60,12 +60,12 @@ const Header = () => {
             >
               Orders
             </li>
-            {/* <li
+            <li
               className="cursor-pointer hover:scale-105 hover:text-[#00B86C]"
-              onClick={() => navigate("/")}
+              onClick={() => navigate("/about")}
             >
-              Franchise
-            </li> */}
+              About Us
+            </li>
             {/* <li
               className="cursor-pointer hover:scale-105 hover:text-[#00B86C]"
               onClick={() => navigate("/")}
@@ -181,15 +181,15 @@ const Header = () => {
               >
                 Order
               </li>
-              {/* <li
+              <li
                 className="cursor-pointer py-2 hover:scale-105 hover:text-[#00B86C]"
                 onClick={() => {
-                  navigate("/");
+                  navigate("/about");
                   setIsVisible(false);
                 }}
               >
-                Franchise
-              </li> */}
+                About Us
+              </li>
               {/* <li
                 className="cursor-pointer py-2 hover:scale-105 hover:text-[#00B86C]"
                 onClick={() => {
