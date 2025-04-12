@@ -76,7 +76,7 @@ const Testimonial = () => {
                 key={index}
                 className="lg:w-1/3 md:w-1/2 p-4 w-full transform transition duration-500 hover:scale-105"
               >
-                <div className="h-full bg-white rounded-lg shadow-lg p-8 flex flex-col items-center text-center">
+                <div className="h-full bg-white rounded-3xl shadow-lg p-8 flex flex-col items-center text-center">
                   {/* Image */}
                   <img
                     alt={testimonial.name}

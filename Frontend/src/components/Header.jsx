@@ -28,7 +28,7 @@ const Header = () => {
   };
 
   return (
-      <div className="bg-transparent w-full lg:w-[80vw] lg:ml-[10vw] h-[12vh] px-10 py-4 flex justify-between items-center absolute ">
+      <div className="bg-transparent w-full lg:w-[80vw] lg:ml-[10vw] h-[12vh] px-10 py-4 flex justify-between items-center absolute bg-white round">
         {/* Logo */}
         <div className="h-full cursor-pointer hover:scale-105 ">
           <div

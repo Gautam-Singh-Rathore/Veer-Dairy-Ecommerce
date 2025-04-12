@@ -6,7 +6,7 @@ import { useNavigate } from "react-router";
 const OurMission = () => {
   const navigate = useNavigate();
   return (
-    <div className="w-full lg:w-[80vw] mx-auto py-12 px-6 lg:px-20 bg-gray-100">
+    <div className="w-full lg:px-[20vw] mx-auto py-12 px-6  bg-gray-100">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-xl md:text-3xl font-bold text-[#00B86C] mb-6">
           Our Mission & Vision
