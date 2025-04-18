@@ -18,7 +18,7 @@ const ProductCard = ({ product }) => {
     <div className="bg-white shadow-lg rounded-xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:scale-105 cursor-pointer">
       {/* Product Image */}
       <img
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/004-soymilk.jpg/1200px-004-soymilk.jpg"
+        src={product.url}
         alt={product.name}
         className="w-full h-48 object-cover"
       />

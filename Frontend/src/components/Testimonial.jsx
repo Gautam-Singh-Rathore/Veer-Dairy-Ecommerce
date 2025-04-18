@@ -113,7 +113,7 @@ const Testimonial = () => {
           >
             {testimonials.map((testimonial, index) => (
               <SwiperSlide key={index}>
-                <div className="h-full bg-white rounded-3xl shadow-lg p-8 flex flex-col items-center text-center">
+                <div className="h-full bg-white rounded-3xl shadow-lg p-8 flex flex-col items-center text-center cursor-pointer">
                   {/* Review in Hindi and English */}
                   <p className="leading-relaxed text-gray-700  mb-4">
                     <strong></strong> {testimonial.reviewHindi}

@@ -1,12 +1,18 @@
 import axios from "axios";
 import React, { useEffect, useState, useContext } from "react";
-import { useParams } from "react-router";
+import { ImWhatsapp } from "react-icons/im";
+import { useNavigate, useParams } from "react-router";
 import { BACKEND_URL } from "../utils/Constants";
 import { CartContext } from "../context/CartProvider";
-import { Plus, Minus, ShoppingCart } from "lucide-react";
+import { FaPlus } from "react-icons/fa";
+import { FaMinus } from "react-icons/fa";
+import { FaShoppingCart } from "react-icons/fa";
+import { FaShareAlt } from "react-icons/fa";
+import toast from "react-hot-toast";
 
 const Product = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
   const [product, setProduct] = useState(null);
   const { cart, addToCart, removeFromCart } = useContext(CartContext);
 
@@ -32,13 +38,31 @@ const Product = () => {
   const cartItem = cart.find((item) => item.id === product.id);
   const quantity = cartItem ? cartItem.quantity : 0;
 
+  const handleShare = async () => {
+    try {
+      if (navigator.share) {
+        // Using the Web Share API for supported browsers
+        await navigator.share({
+          title: product.name,
+          text: `Check out this amazing product: ${product.name}`,
+          url: window.location.href,
+        });
+      } else {
+        // Fallback for unsupported browsers (Share URL via email or link)
+        toast.error("Share feature is not supported on this browser.");
+      }
+    } catch (error) {
+      toast.error("Failed to share product. Please try again.");
+    }
+  };
+
   return (
-    <div className="pt-[12vh] min-h-screen ">
+    <div className="pt-[12vh] min-h-screen">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-10 px-6 py-10">
         {/* Product Image */}
         <div className="w-full md:w-1/2">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/004-soymilk.jpg/1200px-004-soymilk.jpg"
+            src={product.url}
             alt={product.name}
             className="w-full h-[450px] object-cover rounded-lg shadow-md"
           />
@@ -59,7 +83,7 @@ const Product = () => {
               className="mt-5 w-full md:w-2/3 bg-green-600 hover:bg-green-700 text-white py-3 px-6 rounded-lg flex items-center justify-center gap-2 transition-all duration-300 text-lg"
               onClick={() => addToCart(product)}
             >
-              <ShoppingCart size={20} /> Add to Cart
+              <FaShoppingCart  size={20} /> Add to Cart
             </button>
           ) : (
             <div className="mt-5 flex items-center gap-8">
@@ -67,17 +91,33 @@ const Product = () => {
                 className="bg-red-500 hover:bg-red-600 text-white py-3 px-5 rounded-lg transition-all duration-300 text-lg"
                 onClick={() => removeFromCart(product)}
               >
-                <Minus size={22} />
+                <FaMinus  size={22} />
               </button>
               <span className="text-3xl font-semibold">{quantity}</span>
               <button
                 className="bg-green-600 hover:bg-green-700 text-white py-3 px-5 rounded-lg transition-all duration-300 text-lg"
                 onClick={() => addToCart(product)}
               >
-                <Plus size={22} />
+                <FaPlus size={22} />
               </button>
             </div>
           )}
+
+          {/* Share Button */}
+          <div className="mt-5 flex items-center gap-6">
+            <button
+              onClick={handleShare}
+              className="bg-blue-600 hover:bg-blue-700 text-white py-3 px-3 rounded-full flex items-center gap-2 transition-all duration-300 text-lg"
+            >
+              <FaShareAlt  size={20} /> 
+            </button>
+            <button
+              onClick={()=> {window.location.href="https://wa.me/message/CBFQT25QMVDQC1"}}
+              className="bg-green-600 hover:bg-green-700 text-white py-3 px-3 rounded-full flex items-center gap-2 transition-all duration-300 text-lg"
+            >
+              <ImWhatsapp    size={20} /> 
+            </button>
+          </div>
         </div>
       </div>
     </div>

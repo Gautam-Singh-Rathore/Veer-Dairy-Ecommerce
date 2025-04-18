@@ -4,6 +4,7 @@ public class AddProductDTO {
 
     private String name;
     private String description;
+    private String url;
     private Double price;
     private Long categoryId;
     private Long adminId;
@@ -12,12 +13,13 @@ public class AddProductDTO {
     public AddProductDTO() {
     }
 
-    public AddProductDTO(String name, String description, Double price, Long categoryId, Long adminId) {
+    public AddProductDTO(String name, String description, Double price, Long categoryId, Long adminId , String url) {
         this.name = name;
         this.description = description;
         this.price = price;
         this.categoryId = categoryId;
         this.adminId = adminId;
+        this.url=url;
     }
 
     // Getters and Setters
@@ -60,5 +62,13 @@ public class AddProductDTO {
 
     public void setAdminId(Long adminId) {
         this.adminId = adminId;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 }

@@ -32,7 +32,7 @@ public class ProductService {
         Category getCategory = categoryRepo.findById(addProductDTO.getCategoryId())
                 .orElseThrow(()-> new RuntimeException("Category not found"));
 
-        Product newProduct = new Product(addProductDTO.getName(), addProductDTO.getDescription(), addProductDTO.getPrice(), getAdmin , getCategory);
+        Product newProduct = new Product(addProductDTO.getName(), addProductDTO.getDescription(), addProductDTO.getPrice(), getAdmin , getCategory , addProductDTO.getUrl());
         try {
             Product addedProduct = productRepo.save(newProduct);
         }catch (DataIntegrityViolationException e){
@@ -49,7 +49,7 @@ public class ProductService {
         for(Product product : all){
             Category cat = categoryRepo.findById(product.getCategory().getId())
                     .orElseThrow(()-> new RuntimeException("Category not found"));
-            ProductResponseDTO newDto = new ProductResponseDTO(product.getId(), product.getName(), product.getDescription(), product.getPrice(), cat.getName());
+            ProductResponseDTO newDto = new ProductResponseDTO(product.getId(), product.getName(), product.getDescription(), product.getPrice(), cat.getName() , product.getImageUrl());
             response.add(newDto);
         }
         return response;
@@ -65,7 +65,7 @@ public class ProductService {
                 .orElseThrow(()-> new RuntimeException("Products Not Found"));
 
         for(Product product : all){
-            ProductResponseDTO newDto = new ProductResponseDTO(product.getId(), product.getName(), product.getDescription(), product.getPrice(),name);
+            ProductResponseDTO newDto = new ProductResponseDTO(product.getId(), product.getName(), product.getDescription(), product.getPrice(),name , product.getImageUrl());
             response.add(newDto);
         }
         return response;
@@ -75,7 +75,7 @@ public class ProductService {
     public ProductResponseDTO getById(Long id){
         Product product = productRepo.findById(id)
                 .orElseThrow(()-> new RuntimeException("Product not found"));
-        return new ProductResponseDTO(product.getId(), product.getName(), product.getDescription(), product.getPrice() , product.getCategory().getName());
+        return new ProductResponseDTO(product.getId(), product.getName(), product.getDescription(), product.getPrice() , product.getCategory().getName() , product.getImageUrl());
 
     }
 
@@ -89,7 +89,7 @@ public class ProductService {
                 .orElseThrow(()-> new RuntimeException("Products Not Found"));
 
         for(Product product : all){
-            ProductResponseDTO newDto = new ProductResponseDTO(product.getId(), product.getName(), product.getDescription(), product.getPrice(),product.getCategory().getName());
+            ProductResponseDTO newDto = new ProductResponseDTO(product.getId(), product.getName(), product.getDescription(), product.getPrice(),product.getCategory().getName() , product.getImageUrl());
             response.add(newDto);
         }
         return response;

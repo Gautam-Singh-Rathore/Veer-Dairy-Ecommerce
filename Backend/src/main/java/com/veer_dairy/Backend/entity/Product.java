@@ -57,12 +57,13 @@ public class Product {
     public Product() {
     }
 
-    public Product(String name, String description, Double price,   Admin admin, Category category) {
+    public Product(String name, String description, Double price,   Admin admin, Category category , String imageUrl) {
         this.name = name;
         this.description = description;
         this.price = price;
         this.admin = admin;
         this.category = category;
+        this.imageUrl=imageUrl;
     }
 
     // Getters and Setters

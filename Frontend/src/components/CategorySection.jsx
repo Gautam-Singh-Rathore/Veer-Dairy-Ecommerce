@@ -17,6 +17,7 @@ const CategorySection = () => {
 
       if (response.status === 200) {
         setCategories(response.data);
+        console.log(response.data);
       } else {
         console.log("Data not found");
       }

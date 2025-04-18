@@ -7,17 +7,19 @@ public class ProductResponseDTO {
     private String description;
     private Double price;
     private String category;
+    private String url;
 
     // Constructors
     public ProductResponseDTO() {
     }
 
-    public ProductResponseDTO(Long id, String name, String description, Double price, String category) {
+    public ProductResponseDTO(Long id, String name, String description, Double price, String category , String url) {
         this.id = id;
         this.name = name;
         this.description = description;
         this.price = price;
         this.category = category;
+        this.url=url;
     }
 
     // Getters and Setters
@@ -60,5 +62,13 @@ public class ProductResponseDTO {
 
     public void setCategory(String category) {
         this.category = category;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 }

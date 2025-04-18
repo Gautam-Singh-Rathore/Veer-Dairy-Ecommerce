@@ -18,6 +18,7 @@ const AddProductForm = () => {
   const [product, setProduct] = useState({
     name: "",
     description: "",
+    url:"",
     price: "",
     categoryId: null,
     adminId: user.uid,
@@ -113,6 +114,19 @@ const AddProductForm = () => {
               className="w-full bg-transparent outline-none text-gray-800 placeholder-gray-500 resize-none"
               required
             ></textarea>
+          </div>
+          {/* Image url  */}
+          <div className="flex items-center gap-3 bg-white/80 p-3 rounded-lg shadow-md">
+            <FaTag className="text-[#00B86C] text-xl" />
+            <input
+              type="text"
+              name="url"
+              placeholder="Image Url"
+              value={product.url}
+              onChange={handleChange}
+              className="w-full bg-transparent outline-none text-gray-800 placeholder-gray-500"
+              required
+            />
           </div>
 
           {/* Price */}
