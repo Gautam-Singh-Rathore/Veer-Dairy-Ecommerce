@@ -17,6 +17,8 @@ import { useContext } from "react";
 import { UserContext } from "../context/UserProvider";
 import RoleBasedRoute from "./RoleBasedRoute"
 import AboutUs from "../pages/AboutUs";
+import BlogPage from "../pages/BlogPage";
+import BlogDetailPage from "../pages/BlogDetailsPage";
 
 const myRoute = createBrowserRouter([
   {
@@ -73,6 +75,14 @@ const myRoute = createBrowserRouter([
       {
         path:"/about",
         element:<AboutUs/>
+      },
+      {
+        path:"/blogs",
+        element: <BlogPage/>
+      },
+      {
+        path:"/blog/:id",
+        element: <BlogDetailPage/>
       }
     ],
   },

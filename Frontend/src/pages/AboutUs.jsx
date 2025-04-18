@@ -21,8 +21,10 @@ import f1 from "../../public/assets/about/f1.jpg";
 import f2 from "../../public/assets/about/f2.jpg";
 import f3 from "../../public/assets/about/f3.jpg";
 import f4 from "../../public/assets/about/f4.jpg";
+import { useNavigate } from "react-router";
 
 const AboutUs = () => {
+  const navigate = useNavigate();
   const reviews = [
     {
       name: "गोपाल सिंह",
@@ -333,7 +335,7 @@ const AboutUs = () => {
         <div className="bg-gray-200 bg-opacity-95 py-16 px-6 md:px-[12vw] text-center">
           {/* Heading */}
           <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-            Our Family's Stories
+            Our Success Stories
           </h1>
           <p className="text-gray-600 text-md md:text-lg max-w-3xl mx-auto mb-12">
             Our journey is fueled by the stories of our incredible partners.
@@ -389,6 +391,13 @@ const AboutUs = () => {
               </SwiperSlide>
             ))}
           </Swiper>
+          <div className=" flex justify-center items-center py-3">
+          <button  
+            className="bg-green-500 text-white py-2 px-5  rounded-full flex justify-center items-center gap-5 cursor-pointer hover:scale-105 "
+            onClick={()=>navigate("/blogs")} >
+            Read More</button>
+          </div>
+          
         </div>
       </div>
     </div>

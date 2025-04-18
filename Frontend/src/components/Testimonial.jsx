@@ -7,8 +7,8 @@ const Testimonial = () => {
   const testimonials = [
     {
       name: "Aarav Sharma",
-      reviewHindi:
-        "Veer Dairy का दूध और मक्खन मेरे घर में रोज़ इस्तेमाल होता है। दूध इतना गाढ़ा होता है कि चाय और कॉफी का स्वाद ही बदल जाता है, और मक्खन एकदम देसी स्वाद देता है।",
+      // reviewHindi:
+      //   "Veer Dairy का दूध और मक्खन मेरे घर में रोज़ इस्तेमाल होता है। दूध इतना गाढ़ा होता है कि चाय और कॉफी का स्वाद ही बदल जाता है, और मक्खन एकदम देसी स्वाद देता है।",
       reviewEnglish:
         "Veer Dairy’s milk and butter are used daily at my home. The milk is so rich that it completely enhances the taste of tea and coffee.",
       role: "Health-Conscious Consumer",
@@ -16,8 +16,8 @@ const Testimonial = () => {
     },
     {
       name: "Rohan Desai",
-      reviewHindi:
-        "मैंने कई ब्रांड्स का घी ट्राय किया है, लेकिन Veer Dairy का घी एकदम शुद्ध और सुगंधित है। रोटी पर लगा दो या हलवे में डालो – स्वाद दोगुना हो जाता है!",
+      // reviewHindi:
+      //   "मैंने कई ब्रांड्स का घी ट्राय किया है, लेकिन Veer Dairy का घी एकदम शुद्ध और सुगंधित है। रोटी पर लगा दो या हलवे में डालो – स्वाद दोगुना हो जाता है!",
       reviewEnglish:
         "I’ve tried many brands of ghee, but Veer Dairy’s ghee is pure and aromatic. Whether on hot rotis or in halwa – it takes the taste to the next level!",
       role: "Café Owner",
@@ -25,8 +25,8 @@ const Testimonial = () => {
     },
     {
       name: "Priya Malhotra",
-      reviewHindi:
-        "Veer Dairy के प्रोडक्ट्स में जो क्वालिटी है, वो आजकल बहुत कम देखने को मिलती है। पनीर, दूध, बटर और घी – सब कुछ भरोसेमंद और स्वादिष्ट है।",
+      // reviewHindi:
+      //   "Veer Dairy के प्रोडक्ट्स में जो क्वालिटी है, वो आजकल बहुत कम देखने को मिलती है। पनीर, दूध, बटर और घी – सब कुछ भरोसेमंद और स्वादिष्ट है।",
       reviewEnglish:
         "The quality of Veer Dairy products is hard to find these days. Paneer, milk, butter, and ghee – everything is trustworthy and full of flavor.",
       role: "Homemaker",
@@ -34,8 +34,8 @@ const Testimonial = () => {
     },
     {
       name: "Amit Kumar",
-      reviewHindi:
-        "Veer Dairy का बटर बच्चों को इतना पसंद है कि वो रोटी पर सिर्फ वही लगाकर खाना पसंद करते हैं। और दूध तो इतना फ्रेश होता है कि मलाई खुद बन जाती है।",
+      // reviewHindi:
+      //   "Veer Dairy का बटर बच्चों को इतना पसंद है कि वो रोटी पर सिर्फ वही लगाकर खाना पसंद करते हैं। और दूध तो इतना फ्रेश होता है कि मलाई खुद बन जाती है।",
       reviewEnglish:
         "My kids love Veer Dairy’s butter so much they ask for it on plain rotis. And the milk is so fresh that you get a natural cream layer every time.",
       role: "Father & Working Professional",
@@ -43,8 +43,8 @@ const Testimonial = () => {
     },
     {
       name: "Sunita Rao",
-      reviewHindi:
-        "मैंने हाल ही में Veer Dairy का घी लिया – क्या खुशबू है! घर में जैसे पुराना देसी घी बनता था, वैसा ही अनुभव मिला। अब मैं किसी और का घी नहीं लूंगा।",
+      // reviewHindi:
+      //   "मैंने हाल ही में Veer Dairy का घी लिया – क्या खुशबू है! घर में जैसे पुराना देसी घी बनता था, वैसा ही अनुभव मिला। अब मैं किसी और का घी नहीं लूंगा।",
       reviewEnglish:
         "I recently bought Veer Dairy’s ghee – what an aroma! It reminded me of the homemade ghee we used to make years ago. I won’t switch to any other now.",
       role: "Housewife",
@@ -115,9 +115,9 @@ const Testimonial = () => {
               <SwiperSlide key={index}>
                 <div className="h-full bg-white rounded-3xl shadow-lg p-8 flex flex-col items-center text-center cursor-pointer">
                   {/* Review in Hindi and English */}
-                  <p className="leading-relaxed text-gray-700  mb-4">
+                  {/* <p className="leading-relaxed text-gray-700  mb-4">
                     <strong></strong> {testimonial.reviewHindi}
-                  </p>
+                  </p> */}
                   <p className="leading-relaxed text-gray-700  mb-6">
                     <strong></strong> {testimonial.reviewEnglish}
                   </p>
