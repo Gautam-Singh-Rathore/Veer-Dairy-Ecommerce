@@ -11,8 +11,10 @@ import img1 from "../../public/assets/about/img1.jpg";
 import food from "../../public/assets/about/food.jpg";
 import img2 from "../../public/assets/about/img2.jpg";
 import video from "../../public/assets/video.mp4";
+import { useNavigate } from "react-router";
 
 const VideoComponent = () => {
+  const navigate = useNavigate();
   return (
     <div className="relative w-full min-h-screen overflow-hidden">
       {/* First Section: Culture */}
@@ -212,7 +214,8 @@ const VideoComponent = () => {
 
         {/* Button */}
         <div className="mt-8">
-          <button className="bg-[#00B86C] text-white px-6 py-3 rounded-lg flex justify-center items-center gap-4 cursor-pointer hover:scale-105 transition-all duration-200 ease-in-out">
+          <button className="bg-[#00B86C] text-white px-6 py-3 rounded-lg flex justify-center items-center gap-4 cursor-pointer hover:scale-105 transition-all duration-200 ease-in-out"
+          onClick={()=> navigate("/about")}>
             KNOW MORE
           </button>
         </div>

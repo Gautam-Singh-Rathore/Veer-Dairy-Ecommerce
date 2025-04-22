@@ -13,11 +13,8 @@ const CategorySection = () => {
   const getCategories = async () => {
     try {
       const response = await axios.get(BACKEND_URL + "/category/all");
-      console.log("API Response:", response);
-
       if (response.status === 200) {
         setCategories(response.data);
-        console.log(response.data);
       } else {
         console.log("Data not found");
       }
@@ -32,28 +29,30 @@ const CategorySection = () => {
 
   const getCategoryImage = (id) => {
     const images = { 1: c1, 2: c2, 3: c3 };
-    return images[id] || c1; // Default image
+    return images[id] || c1;
   };
 
   return (
-    <div className="w-full lg:w-[80vw] lg:ml-[10vw] px-4 py-6 md:py-10">
-      <h2 className="text-xl md:text-3xl font-bold mb-6 text-center text-[#00B86C]">
+    <div className="w-full lg:w-[80vw] lg:ml-[10vw] px-4 py-10">
+      <h2 className="text-3xl font-bold mb-8 text-center text-[#00B86C]">
         Categories
       </h2>
 
-      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 place-items-center">
         {categories.map((cat) => (
           <div
             key={cat.id}
-            className="bg-gray-100  rounded-3xl text-center cursor-pointer hover:scale-105 transition-transform duration-300 shadow-md"
-            onClick={()=> navigate(`/products/${cat.name}`)}
+            className="w-[85%] sm:w-[90%] md:w-full bg-white rounded-3xl overflow-hidden text-center cursor-pointer shadow-md hover:shadow-xl hover:scale-[1.03] transition-transform duration-300"
+            onClick={() => navigate(`/products/${cat.name}`)}
           >
-            <img
-              src={getCategoryImage(cat.id)}
-              alt={cat.name}
-              className="w-full h-36 sm:h-40 object-cover rounded-md rounded-t-3xl"
-            />
-            <h3 className="py-2  md:text-xl font-semibold text-gray-800">
+            <div className="overflow-hidden rounded-t-3xl">
+              <img
+                src={getCategoryImage(cat.id)}
+                alt={cat.name}
+                className="w-full h-40 object-cover transition-transform duration-300 hover:scale-105"
+              />
+            </div>
+            <h3 className="py-4 text-lg md:text-xl font-semibold text-gray-800">
               {cat.name}
             </h3>
           </div>

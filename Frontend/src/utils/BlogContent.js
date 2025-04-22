@@ -1,8 +1,14 @@
+import b1 from "../../public/assets/blog/blog1.jpg"
+import b2 from "../../public/assets/blog/blog2.jpg"
+import b3 from "../../public/assets/blog/blog3.jpg"
+import b4 from "../../public/assets/blog/blog4.jpg"
+import b5 from "../../public/assets/blog/blog5.jpg"
 export const content = [
   {
     id: 1,
     date: "April 15, 2025",
     by: "From One Cow to a Dairy Enterprise – Ram Singh’s Journey from Alwar",
+    image: b1,
     category: "Farmer Stories | District: Alwar",
     content: `I never imagined that milk from one cow could change my entire life,” says Ram Singh, a 42-year-old farmer from a small village in Alwar, Rajasthan.
 
@@ -35,9 +41,10 @@ Community Role: Local mentor to 15+ dairy farmers`,
   {
     id: 2,
     date: "Feb 12, 2025",
+    image: b2,
     by: "How Veer Dairy is Empowering Women in Rural Rajasthan",
     category: "Women in Farming | District: Jhunjhunu",
-    content :`
+    content: `
 “People used to say women can't run a dairy farm. Today, I manage four cows, handle sales, and train others in my village,” says Sunita Devi, a 36-year-old mother of three from a village near Jhunjhunu.
 
 In rural Rajasthan, dairy farming has traditionally been viewed as a man's responsibility. But Sunita’s story breaks this stereotype in the most inspiring way. Like many women, she had been involved in feeding and caring for animals since her teenage years — yet she was never recognized as a ‘farmer.’
@@ -81,11 +88,12 @@ Status: Recognized as a community dairy mentor
 
 Veer Dairy believes that empowering women is key to transforming agriculture. Their dedication, attention to detail, and resilience make them powerful change-makers in every village.
 
-Sunita’s story is just the beginning. Across Rajasthan, more women are stepping into leadership roles in dairy — and Veer Dairy is proud to stand with them every step of the way.`
+Sunita’s story is just the beginning. Across Rajasthan, more women are stepping into leadership roles in dairy — and Veer Dairy is proud to stand with them every step of the way.`,
   },
   {
     id: 3,
     date: "1 अप्रैल 2025",
+    image: b3,
     by: " हम अपने किसानों को कौन सी 5 स्मार्ट डेयरी प्रैक्टिसेस सिखाते हैं – और ये काम करती हैं!",
     category: "किसान शिक्षा | स्थान: सभी जिलों",
     content: `डेयरी खेती एक ऐसा व्यवसाय है जिसे बहुत आसान समझा जाता है — गाय को चारा देना, उसे दुहना, और फिर दूध बेचना। लेकिन जो लोग इसे रोज़ करते हैं, वे जानते हैं कि यह बहुत जटिल और मेहनत से भरा काम है। वीर डेयरी के साथ, हम वर्षों से राजस्थान के किसानों के साथ मिलकर काम कर रहे हैं और हमने यह देखा है कि रोज़मर्रा की कुछ छोटे सुधारों से भारी परिणाम आ सकते हैं, चाहे वह दूध की गुणवत्ता हो या आमदनी।
@@ -105,6 +113,7 @@ Sunita’s story is just the beginning. Across Rajasthan, more women are steppin
   {
     id: 4,
     date: "March 27, 2025",
+    image: b4,
     by: "From Farm to Home – How Veer Dairy Delivers Freshness Every Day",
     category: " Behind the Scenes | Location: Rajasthan",
     content: `Behind every glass of milk that reaches a home, there’s a long journey — one that begins before sunrise, right from the farm. At Veer Dairy, we’ve built a system that respects the hard work of farmers and the trust of consumers. Our goal has always been simple: fresh milk, fair prices, and full transparency.
@@ -120,11 +129,12 @@ What makes this model special is the absence of middlemen. This not only ensures
 We also keep everything transparent. Farmers get payment directly in their bank accounts, and customers can scan QR codes on the packaging to learn where their milk came from. It builds trust and connects both ends of the chain — the one who produces and the one who consumes.
 
 For our farmers, this model offers pride. For our customers, it offers peace of mind. And for us, it offers the joy of building a system that values both tradition and technology. From the early morning cries of cattle in the village to the quiet satisfaction of someone pouring fresh milk into a cup of tea — this is the journey of Veer Dairy
-`, 
+`,
   },
   {
     id: 5,
     date: "15 अप्रैल 2025",
+    image: b5,
     by: "एक-एक लीटर से बदलती ज़िंदगी – ग्रामीण जीवन में वीर डेयरी का असर",
     category: "ग्रामीण विकास | स्थान: बहु-जिला प्रभाव",
     content: `जब वीर डेयरी की शुरुआत हुई, तो हमारे सामने एक स्पष्ट सपना था — एक ऐसा मॉडल बनाना जो ग्रामीण परिवारों को बेहतर कमाई, सम्मानजनक जीवन और आत्मनिर्भरता की राह पर ले जाए। समय के साथ यह सपना हकीकत में बदला, और आज राजस्थान के कई गाँवों में इसका असर साफ दिखाई देता है। यह कहानी अब केवल दूध की नहीं रही, बल्कि सम्मान, आत्मविश्वास और बदलाव की बन गई है।
