@@ -56,6 +56,12 @@ const Header = () => {
             </li>
             <li
               className="cursor-pointer hover:scale-105 hover:text-[#00B86C]"
+              onClick={() => navigate("/blogs")}
+            >
+              Blogs
+            </li>
+            <li
+              className="cursor-pointer hover:scale-105 hover:text-[#00B86C]"
               onClick={() => {isLoggedIn?navigate("/orders"):navigate("/login")}}
             >
               Orders
@@ -166,12 +172,22 @@ const Header = () => {
               <li
                 className="cursor-pointer py-2 hover:scale-105 hover:text-[#00B86C]"
                 onClick={() => {
+                  navigate("/blogs");
+                  setIsVisible(false);
+                }}
+              >
+                Blogs
+              </li>
+              <li
+                className="cursor-pointer py-2 hover:scale-105 hover:text-[#00B86C]"
+                onClick={() => {
                   navigate("/cart");
                   setIsVisible(false);
                 }}
               >
                 Cart
               </li>
+              
               <li
                 className="cursor-pointer py-2 hover:scale-105 hover:text-[#00B86C]"
                 onClick={() => {

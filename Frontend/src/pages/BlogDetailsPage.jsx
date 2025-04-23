@@ -16,7 +16,7 @@ const BlogDetailPage = () => {
   }
 
   return (
-    <div className="py-[12vh] max-w-4xl mx-auto px-4">
+    <div className="py-[12vh] max-w-4xl mx-auto px-4 ">
       <Link to="/blogs" className="text-blue-500 hover:underline mb-4 inline-block">← Back to Blogs</Link>
 
       {/* Category and Date */}
@@ -30,7 +30,7 @@ const BlogDetailPage = () => {
         <img
           src={blog.image}
           alt={blog.by}
-          className="rounded-xl w-full object-cover max-h-[400px] mb-6 shadow-md"
+          className="rounded-xl w-full object-contain max-h-[400px] mb-6 "
         />
       )}
 

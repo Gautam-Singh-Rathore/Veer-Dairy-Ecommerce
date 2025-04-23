@@ -6,7 +6,7 @@ const BlogPage = () => {
   const navigate = useNavigate()
 
   return (
-    <div className="pt-[12vh] max-w-6xl mx-auto px-4">
+    <div className="pt-[12vh] max-w-6xl mx-auto px-4 pb-10">
       <h1 className="text-3xl font-semibold mb-8 text-center text-green-600">Our Stories</h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -21,7 +21,7 @@ const BlogPage = () => {
               <img
                 src={blog.image}
                 alt={blog.by}
-                className="w-full h-48 object-cover"
+                className="w-full h-48 object-contain"
               />
             )}
 

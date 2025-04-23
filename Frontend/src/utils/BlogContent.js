@@ -4,91 +4,91 @@ import b3 from "../../public/assets/blog/blog3.jpg"
 import b4 from "../../public/assets/blog/blog4.jpg"
 import b5 from "../../public/assets/blog/blog5.jpg"
 export const content = [
-  {
+ {
     id: 1,
     date: "April 15, 2025",
-    by: "From One Cow to a Dairy Enterprise – Ram Singh’s Journey from Alwar",
+    by: "From One Cow to a Dairy Enterprise – Ram Singh’s Journey from Jaipur",
     image: b1,
-    category: "Farmer Stories | District: Alwar",
-    content: `I never imagined that milk from one cow could change my entire life,” says Ram Singh, a 42-year-old farmer from a small village in Alwar, Rajasthan.
-
-Just a few years ago, Ram Singh was struggling to make ends meet. He had a single cow, and his daily milk production was hardly enough to feed his family. Local vendors offered low prices, and he had no proper storage or transport facility. His income was unstable, and farming alone couldn’t support his children’s education or medical needs.
-
-That’s when he heard about Veer Dairy from a neighboring farmer who had recently started supplying milk. Skeptical at first, Ram Singh attended a small orientation session conducted by the Veer Dairy field team. He was surprised to see how many farmers had already joined and how the process worked — simple, transparent, and farmer-friendly.
-
-After his first delivery, he received immediate digital confirmation, and payment was made within 48 hours, directly into his bank account — something he had never experienced before. Veer Dairy’s team also helped him improve the quality of cattle feed, vaccination schedules, and maintain clean milking practices.
-
-Within 8 months, Ram Singh’s daily milk yield increased from 5 liters to 18 liters. He reinvested his profits into purchasing two more cows, built a covered shed, and even installed a solar-powered water system for his animals.
-
-His income more than tripled. What was once a side activity had now become a full-fledged dairy enterprise. Today, Ram Singh proudly supplies high-quality milk to Veer Dairy every morning and has become a local inspiration for nearby villages.
-
-“Veer Dairy didn’t just buy my milk — they helped build my dream,” Ram Singh says with pride.
-
-He now guides other small farmers and even hosts weekend meetings at his home to educate them about cattle care and how to work with Veer Dairy.
-
-Impact at a Glance:
-
-Initial Milk Output: 5 Liters/day
-
-Current Output: 18 Liters/day
-
-Cows Owned: 1 → 3
-
-Monthly Income Growth: 3x
-
-Community Role: Local mentor to 15+ dairy farmers`,
+    category: "Farmer Stories | District: Jaipur",
+    content: `I never imagined that milk from one cow could change my entire life,” says Ram Singh, a 42-year-old farmer from a small village in Jaipur, Rajasthan.
+  
+  Just a few years ago, Ram Singh was struggling to make ends meet. He had a single cow, and his daily milk production was hardly enough to feed his family. Local vendors offered low prices, and he had no proper storage or transport facility. His income was unstable, and farming alone couldn’t support his children’s education or medical needs.
+  
+  That’s when he heard about Veer Dairy from a neighboring farmer who had recently started supplying milk. Skeptical at first, Ram Singh attended a small orientation session conducted by the Veer Dairy field team. He was surprised to see how many farmers had already joined and how the process worked — simple, transparent, and farmer-friendly.
+  
+  After his first delivery, he received immediate digital confirmation, and payment was made within 48 hours, directly into his bank account — something he had never experienced before. Veer Dairy’s team also helped him improve the quality of cattle feed, vaccination schedules, and maintain clean milking practices.
+  
+  Within 8 months, Ram Singh’s daily milk yield increased from 5 liters to 18 liters. He reinvested his profits into purchasing two more cows, built a covered shed, and even installed a solar-powered water system for his animals.
+  
+  His income more than tripled. What was once a side activity had now become a full-fledged dairy enterprise. Today, Ram Singh proudly supplies high-quality milk to Veer Dairy every morning and has become a local inspiration for nearby villages.
+  
+  “Veer Dairy didn’t just buy my milk — they helped build my dream,” Ram Singh says with pride.
+  
+  He now guides other small farmers and even hosts weekend meetings at his home to educate them about cattle care and how to work with Veer Dairy.
+  
+  Impact at a Glance:
+  
+  Initial Milk Output: 5 Liters/day
+  
+  Current Output: 18 Liters/day
+  
+  Cows Owned: 1 → 3
+  
+  Monthly Income Growth: 3x
+  
+  Community Role: Local mentor to 15+ dairy farmers`
   },
   {
     id: 2,
     date: "Feb 12, 2025",
     image: b2,
     by: "How Veer Dairy is Empowering Women in Rural Rajasthan",
-    category: "Women in Farming | District: Jhunjhunu",
+    category: "Women in Farming | District: Alwar",
     content: `
-“People used to say women can't run a dairy farm. Today, I manage four cows, handle sales, and train others in my village,” says Sunita Devi, a 36-year-old mother of three from a village near Jhunjhunu.
-
-In rural Rajasthan, dairy farming has traditionally been viewed as a man's responsibility. But Sunita’s story breaks this stereotype in the most inspiring way. Like many women, she had been involved in feeding and caring for animals since her teenage years — yet she was never recognized as a ‘farmer.’
-
-Her husband worked as a daily laborer, and money was always tight. The milk from their two cows was sold to local middlemen who paid late and often underquoted prices. Sunita had no control over finances, nor any formal support.
-
-That changed in early 2023 when Veer Dairy began collecting milk in her village. One of our female field agents approached her and explained how she could register in her own name, track deliveries through SMS, and receive payments directly into her bank account.
-
-At first, she hesitated. But with support from the Veer Dairy team and her growing curiosity, Sunita took the step. And that one decision became a turning point.
-
-Turning Struggles into Strength
-Sunita joined Veer Dairy’s Women Empowerment Program, where she learned:
-
-How to identify early signs of cattle illness
-
-Nutritional planning to boost milk production
-
-Bookkeeping for small dairy operations
-
-Her rights as a female landholder and supplier
-
-Within months, she improved the feed schedule, ensured clean water availability, and vaccinated her cows on time. Her milk production rose by 40%, and her monthly earnings doubled. The money went directly into her own account, giving her financial independence for the first time in her life.
-
-Building a Dairy Sisterhood
-Sunita didn’t stop there. Inspired by her growth, she formed a local women’s dairy group with 10 other women. They now meet every week, share techniques, pool small savings, and invest in bulk feed purchases to reduce costs.
-
-Through Veer Dairy’s network, Sunita has also attended two local workshops, where she spoke to a gathering of over 50 farmers — both men and women.
-
-“I never thought I’d teach others. But now, I say to every woman — don’t wait for permission. Take the lead.”
-
-Impact at a Glance:
-Milk Production Increase: +40%
-
-Monthly Income: Doubled
-
-New Cows Purchased: 1 (with savings)
-
-Women Farmers Trained: 10+
-
-Status: Recognized as a community dairy mentor
-
-Veer Dairy believes that empowering women is key to transforming agriculture. Their dedication, attention to detail, and resilience make them powerful change-makers in every village.
-
-Sunita’s story is just the beginning. Across Rajasthan, more women are stepping into leadership roles in dairy — and Veer Dairy is proud to stand with them every step of the way.`,
+  “People used to say women can't run a dairy farm. Today, I manage four cows, handle sales, and train others in my village,” says Sunita Devi, a 36-year-old mother of three from a village near Alwar.
+  
+  In rural Rajasthan, dairy farming has traditionally been viewed as a man's responsibility. But Sunita’s story breaks this stereotype in the most inspiring way. Like many women, she had been involved in feeding and caring for animals since her teenage years — yet she was never recognized as a ‘farmer.’
+  
+  Her husband worked as a daily laborer, and money was always tight. The milk from their two cows was sold to local middlemen who paid late and often underquoted prices. Sunita had no control over finances, nor any formal support.
+  
+  That changed in early 2023 when Veer Dairy began collecting milk in her village. One of our female field agents approached her and explained how she could register in her own name, track deliveries through SMS, and receive payments directly into her bank account.
+  
+  At first, she hesitated. But with support from the Veer Dairy team and her growing curiosity, Sunita took the step. And that one decision became a turning point.
+  
+  Turning Struggles into Strength
+  Sunita joined Veer Dairy’s Women Empowerment Program, where she learned:
+  
+  How to identify early signs of cattle illness
+  
+  Nutritional planning to boost milk production
+  
+  Bookkeeping for small dairy operations
+  
+  Her rights as a female landholder and supplier
+  
+  Within months, she improved the feed schedule, ensured clean water availability, and vaccinated her cows on time. Her milk production rose by 40%, and her monthly earnings doubled. The money went directly into her own account, giving her financial independence for the first time in her life.
+  
+  Building a Dairy Sisterhood
+  Sunita didn’t stop there. Inspired by her growth, she formed a local women’s dairy group with 10 other women. They now meet every week, share techniques, pool small savings, and invest in bulk feed purchases to reduce costs.
+  
+  Through Veer Dairy’s network, Sunita has also attended two local workshops, where she spoke to a gathering of over 50 farmers — both men and women.
+  
+  “I never thought I’d teach others. But now, I say to every woman — don’t wait for permission. Take the lead.”
+  
+  Impact at a Glance:
+  Milk Production Increase: +40%
+  
+  Monthly Income: Doubled
+  
+  New Cows Purchased: 1 (with savings)
+  
+  Women Farmers Trained: 10+
+  
+  Status: Recognized as a community dairy mentor
+  
+  Veer Dairy believes that empowering women is key to transforming agriculture. Their dedication, attention to detail, and resilience make them powerful change-makers in every village.
+  
+  Sunita’s story is just the beginning. Across Rajasthan, more women are stepping into leadership roles in dairy — and Veer Dairy is proud to stand with them every step of the way.`
   },
   {
     id: 3,

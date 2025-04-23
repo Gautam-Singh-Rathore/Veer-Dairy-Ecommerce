@@ -7,14 +7,52 @@ import c1 from "../../public/assets/about/c1.png";
 import c2 from "../../public/assets/about/c2.png";
 import c3 from "../../public/assets/about/c3.png";
 import c4 from "../../public/assets/about/c4.png";
+
+import f1 from "../../public/assets/about/f1.jpg";
+import f2 from "../../public/assets/about/f2.jpg";
+import f3 from "../../public/assets/about/f3.jpg";
+import f4 from "../../public/assets/about/f4.jpg";
 import img1 from "../../public/assets/about/img1.jpg";
 import food from "../../public/assets/about/food.jpg";
 import img2 from "../../public/assets/about/img2.jpg";
 import video from "../../public/assets/video.mp4";
+
+import { Swiper, SwiperSlide } from "swiper/react";
 import { useNavigate } from "react-router";
 
 const VideoComponent = () => {
   const navigate = useNavigate();
+
+  const reviews = [
+      {
+        name: "गोपाल सिंह",
+        place: "जयपुर",
+        review:
+          "मैं पहले बस अपने मोहल्ले में दूध बेचता था, लेकिन जब Veer Dairy से जुड़ा, तो मेरा दूध अब पैक होकर पूरे जयपुर में बिकता है। गायें बढ़ाई, आमदनी बढ़ी, और सबसे बड़ी बात – अब मुझे लोग पहचानने लगे हैं। पहले जो बस ‘गोपाल दूध वाला’ था, अब एक ब्रांड से जुड़ा किसान हूँ। मेरा जीवन पूरी तरह बदल चुका है।",
+        image: f4,
+      },
+      {
+        name: "सरिता देवी",
+        place: "अलवर",
+        review:
+          "हम सीकर की चार महिलाएं मिलकर गाय-भैंस पालती हैं। पहले घर से बाहर निकलना मुश्किल था, लेकिन जब Veer Dairy की टीम आई और हमें साथ जोड़ने का मौका दिया, तो हमने खुद को साबित किया। आज हम हर महीने अच्छी कमाई कर रही हैं। अब हमारे बच्चों को बोलना अच्छा लगता है – मेरी माँ भी कमाती है। ",
+        image: f2,
+      },
+      {
+        name: "धर्मवीर गुर्जर",
+        place: "नागौर",
+        review:
+          "पहले बाजार में रेट के लिए लड़ते रहते थे। कोई 20 रुपये देता, कोई 25। पर Veer Dairy से जुड़ने के बाद सब कुछ सिस्टम में हो गया – दूध तौल के लिया जाता है, ऑनलाइन पेमेंट मिलती है और महीने का हिसाब-किताब बिलकुल साफ। अब हमें कोई छोटा काम करने वाला नहीं समझता – अब हम प्रोफेशनल सप्लायर बन चुके हैं। ",
+        image: f3,
+      },
+      {
+        name: "लक्ष्मीबाई",
+        place: "सवाई माधोपुर",
+        review:
+          "मैंने सोचा नहीं था कि एक दिन घर की बहू भी बिज़नेस संभालेगी। Veer Dairy से जुड़कर मैंने गायों की देखभाल, दूध की गुणवत्ता और मार्केटिंग तक सब सीखा। अब मोहल्ले की औरतें मुझसे सलाह लेती हैं। घरवाले भी कहते हैं – तू तो अब सवाई माधोपुर की रोल मॉडल बन गई है! मेरी मेहनत और समर्पण अब दूसरों के लिए प्रेरणा बन चुकी है।",
+        image: f1,
+      },
+    ];
   return (
     <div className="relative w-full min-h-screen overflow-hidden">
       {/* First Section: Culture */}
@@ -85,6 +123,74 @@ const VideoComponent = () => {
           ))}
         </div>
       </div>
+
+      <div className="bg-gray-200 bg-opacity-95 py-16 px-6 md:px-[12vw] text-center">
+          {/* Heading */}
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+            Our Supporting Hands
+          </h1>
+          <p className="text-gray-600 text-md md:text-lg max-w-3xl mx-auto mb-12">
+            Our journey is fueled by the stories of our incredible partners.
+            From Jaipur to Jhunjhunu, these are the voices of change.
+          </p>
+
+          {/* Swiper for the Reviews */}
+          <Swiper
+            spaceBetween={30}
+            slidesPerView={1}
+            loop={true}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            breakpoints={{
+              640: {
+                slidesPerView: 1,
+              },
+              768: {
+                slidesPerView: 2,
+              },
+              1024: {
+                slidesPerView: 3,
+              },
+            }}
+            className="mySwiper"
+          >
+            {reviews.map((review, index) => (
+              <SwiperSlide key={index}>
+                <div className="bg-white shadow-xl overflow-hidden transition-all duration-300 rounded-2xl cursor-pointer border-[1px] border-green-800">
+                  {/* Image Section */}
+                  <div className="w-full h-48 overflow-hidden">
+                    <img
+                      src={review.image}
+                      alt={`Review by ${review.name}`}
+                      className="w-full h-full object-cover transition-all duration-500 transform hover:scale-110 overflow-hidden"
+                    />
+                  </div>
+
+                  <div className="p-6 space-y-4">
+                    {/* Name and Place */}
+                    <h2 className="text-xl font-bold text-green-800 mb-2">
+                      {review.name}
+                    </h2>
+                    <p className="text-gray-500 text-sm">{review.place}</p>
+                    {/* Review Text */}
+                    <p className="text-black text-base leading-relaxed">
+                      {review.review}
+                    </p>
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          <div className=" flex justify-center items-center py-3">
+          <button  
+            className="bg-green-500 text-white py-2 px-5  rounded-full flex justify-center items-center gap-5 cursor-pointer hover:scale-105 "
+            onClick={()=>navigate("/blogs")} >
+            Read More</button>
+          </div>
+          
+        </div>
 
       {/* 1.5th Section: Culture */}
       {/* Part 3 */}
